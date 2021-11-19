@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/tblogo.png">
+    <title>TheBasics of The Rosary</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            min-height: 100vh;
+            display: flex;
+            background-image: linear-gradient(180deg, rgb(105, 64, 255), rgb(233, 64, 255));
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .card1{
+            width: 700px;
+            height: 900px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .theintrotext{
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 500;
+            margin-top: 50px;
+        }
+        .theintrotext span{
+            font-family: Poppins;
+            font-size: 45px;
+            font-weight: 700;
+            margin-top: 60px;
+        }
+        .text2{
+            font-family: Poppins;
+            font-size: 35px;
+            font-weight: 400;
+            margin-top: 60px;
+            animation: in-text2 1s cubic-bezier(0.22, 0.02, 0, 1);
+        }
+        @keyframes in-text2{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .text3{
+            font-family: Poppins;
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 20px;
+            animation: in-text3 2s cubic-bezier(0.22, 0.02, 0, 1);
+        }
+        @keyframes in-text3{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .selection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 250px;
+            height: 50px;
+            border: 1px solid #e9e9e9;
+            border-radius: 15px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .selection a{
+            font-size: 15px;
+            font-family: Poppins;
+            padding: 10px 19px;
+            position: relative;
+            z-index: 2;
+        }
+        .selectbg{
+            position: absolute;
+            width: 60px;
+            height: 35px;
+            background-image: linear-gradient(180deg, rgb(105, 64, 255), rgb(233, 64, 255));
+            left: 35%;
+            border-radius: 10px;
+            animation: in-sel 1s ease-in-out;
+        }
+        @keyframes in-sel {
+            from{
+                left: 69%;
+            }
+            to{
+                left: 35%;
+            }
+        }
+        .btn1{
+            color: black;
+            text-decoration: none;
+        }
+        @keyframes btn1-in {
+            from{
+                color: white;
+            }
+            to{
+                color: black;
+            }
+        }
+        @keyframes btn2-in {
+            from{
+                color: black;
+            }
+            to{
+                color: white;
+            }
+        }
+        .btn1:hover{
+            cursor: pointer;
+        }
+        .btn2{
+            color: white;
+            animation: btn2-in 1s ease-in-out;
+        }
+        .btn3{
+            color: black;
+            animation: btn1-in 1s ease-in-out;
+        }
+        .btn2:hover{
+            cursor: default;
+        }
+        .btn3{
+            color: black;
+            text-decoration: none;
+        }
+        .btn3:hover{
+            cursor: pointer;
+        }
+        .smallbeads{
+            margin-top: 0px;
+            height: 380px;
+            width: 600px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid #e9e9e9;
+            border-radius: 10px;
+            background-color: white;
+            margin-left: 5px;
+            transform: translateY(0%);
+            animation: in-card-tab 2s cubic-bezier(0.22, 0.02, 0, 1);
+        }
+        @keyframes in-card-tab {
+            from{
+                transform: translateY(110%);
+            }
+            to{
+                transform: translateY(0%);
+            }
+        }
+        .title-1{
+            margin-top: 30px;
+            font-family: Poppins;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .exp1{
+            margin-top: 15px;
+            font-family: Poppins;
+            font-size: 23px;
+        }
+        .exp1 span{
+            font-weight: 500;
+        }
+        .exp1 span a{
+            text-decoration: none;
+            color: black;
+        }
+        .exp1 span:hover{
+            cursor: pointer;
+        }
+        .slide{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            width: 610px;
+            height: 390px;
+            overflow: hidden;
+        }
+        .outerpart1{
+            width: 40px;
+            height: 40px;
+            margin-top: 20px;
+            margin-right: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .outerpart1:hover{
+            background-color: white;
+            box-shadow: 0 0 15px #e9e9e9;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            margin-right: 610px;
+        }
+        #frwd{
+            font-size: 30px;
+            color: black;
+            margin-top: 5px;
+        }
+        #frwd:hover{
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <main>
+            <div class="card1">
+                <div class="outerpart1">
+                    <a href="index.html"><i class="material-icons" id="frwd">arrow_back</i></a>
+                </div>
+                <p class="theintrotext" align="center">The Basics of<br><span>The Rosary</span></p>
+                <p class="text2">The Types Of Beads</p>
+                <p class="text3">Select one</p>
+                <div class="selection">
+                    <a class="btn1" href="thebeads.html">Small</a>
+                    <a class="btn2">Large</a>
+                    <a class="btn3" href="thecrucifx.html">Crucifix</a>
+                    <div class="selectbg"></div>
+                </div>
+                <div class="slide">
+                    <div class="slider">
+                        <div class="smallbeads">
+                            <p class="title-1">The Large Beads</p>
+                            <p class="exp1" align="center">In each end of a mystery, there is one Large Bead to end at.<br>
+                            These are called the Large Beads. In each bead you<br>will need to recite the<span><a href=""> Our Father Prayer.</a></span><br>
+                            The prayer can be found in the Prayers section<br> or the you can click the link that is bolded.
+                            To redirect you!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
